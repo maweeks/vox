@@ -4,9 +4,10 @@ help:          ## Show this help.
 env:           ## List the environment versions
 	which java
 	java --version
+	mvn --version
 
 test:          ## Run the tests for this prject
 	mvn test
 
-install:       ## Install the required imports for this project
+install:       ## Install the required packages for this project
 	mvn install

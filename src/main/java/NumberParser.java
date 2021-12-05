@@ -38,8 +38,10 @@ public class NumberParser {
         userNumber = userNumber.replaceAll("\\s+","");
 
         String userLocation = getUserLocation(userNumber);
-
-        return "+" + countryCodes.get(userLocation) + dialledNumber.substring((nationalTrunkPrefixes.get(userLocation)).length());
+        if (userLocation.length() > 0) {
+            return "+" + countryCodes.get(userLocation) + dialledNumber.substring((nationalTrunkPrefixes.get(userLocation)).length());
+        }
+        return dialledNumber;
     }
 
     private String getUserLocation(String userNumber){
