@@ -25,3 +25,9 @@ Running the tests:
 - Can run `make env` to check java and maven installation.
 - Use `make install` to install the required packages
 - Use `make test` to run the tests
+
+## Assumptions
+
+- `userNumber` always contains country code
+- `userNumber` country code is always in the supplied list of country codes
+- All countries in `countryCodes` will also be contained in the supplied `nationalTrunkPrefixes`
